@@ -1,0 +1,388 @@
+{
+  "Actor": {
+    "types": ["traveller", "npc", "creature", "spacecraft", "package", "vehicle" ],
+    "templates": {
+      "base": {
+        "speed": {
+            "base": 6,
+            "value": 6
+        },
+        "initiative": {
+            "base": 0,
+            "value": 0
+        },
+        "size": 0,
+        "rads": 0,
+        "weightCarried": 0,
+        "heavyLoad": 0,
+        "maxLoad": 0,
+        "modifiers": {
+            "encumbrance": {
+                "custom": 0,
+                "auto": 0,
+                "effect": 0,
+                "dm": 0,
+                "multiplierBonus": 0
+            },
+            "physical": {
+                "custom": 0,
+                "auto": 0,
+                "effect": 0,
+                "dm": 0
+            },
+            "melee": {
+                "custom": 0,
+                "auto": 0,
+                "effect": 0,
+                "dm": 0
+            },
+            "guncombat": {
+                "custom": 0,
+                "auto": 0,
+                "effect": 0,
+                "dm": 0
+            },
+            "speed":  {
+                "custom": 0,
+                "auto": 0,
+                "effect": 0,
+                "dm": 0
+            },
+            "initiative": {
+                "custom": 0,
+                "auto": 0,
+                "effect": 0,
+                "dm": 0
+            }
+        },
+        "hits": {
+            "value": 21,
+            "max": 21,
+            "damage": 0,
+            "tmpDamage": 0
+        },
+        "description": "",
+        "settings": {
+            "hideUntrained": false,
+            "onlyBackground": false,
+            "resetOnRoll": false,
+            "columns": 3,
+            "lockCharacteristics": false,
+            "lockSkills": false,
+            "autoAge":  true
+        }
+      },
+      "sophont": {
+        "sophont": {
+            "age": 18,
+            "species": "Vilani",
+            "speciesTraits": "",
+            "gender": "",
+            "weight": 80,
+            "height": 171,
+            "profession": "",
+            "homeworld": ""
+        }
+      },
+      "characteristics": {
+        "characteristics": { }
+      },
+      "damage": {
+        "damage": {
+            "STR": { "value": 0 },
+            "DEX": { "value": 0 },
+            "END": { "value": 0, "tmp": 0 },
+            "PSI": { "value": 0 },
+            "LCK": { "value": 0 },
+            "STY": { "value": 0 }
+        }
+      },
+      "armour": {
+          "protection": 0,
+          "otherProtection": 0,
+          "otherTypes": "",
+          "rad": 0,
+          "tl": 0,
+          "archaic": 0,
+          "ablat": 0,
+          "powered": 0
+      },
+      "crewed": {
+          "crewed": {
+              "crew": {},
+              "passengers": {},
+              "roles": {
+              }
+          }
+      },
+      "skills": {
+          "skills": { }
+      }
+    },
+    "traveller": {
+      "templates": [ "base", "characteristics", "skills", "damage", "armour", "sophont" ],
+      "finance": {
+          "cash": 0,
+          "pension": 0,
+          "medicalDebt": 0,
+          "mortgage": 0,
+          "livingCosts": 0,
+          "otherIncome": 0
+      },
+      "player": "",
+      "terms": 0,
+      "startAge": 18,
+      "termLength": 4,
+      "entryYear": 1105,
+      "entryAge": 18
+    },
+    "npc": {
+        "templates": [ "base", "characteristics", "skills", "armour", "sophont" ],
+        "finance": {
+            "cash": 0
+        }
+    },
+    "creature": {
+        "templates": [ "base", "skills", "armour" ],
+        "behaviour": "",
+        "traits": ""
+    },
+    "package": {
+        "templates": [ "base", "characteristics", "skills", "sophont" ],
+        "cash": 0
+    },
+    "vehicle": {
+      "templates": [ "crewed" ],
+      "hits": {
+        "value": 12,
+        "max": 12,
+        "damage": 0,
+        "criticals": {}
+      },
+      "initiative": {
+        "base": 0,
+        "value": 0
+      },
+      "vehicle": {
+        "spacecs": 4,
+        "chassis": "lightGround",
+        "subtype": "openFrame",
+        "traits": "",
+        "tl": 7,
+        "armour": {
+          "base": 0,
+          "front" : 0,
+          "rear": 0,
+          "sides": 0
+        },
+        "cost": 10000,
+        "skill": "driver.wheeled",
+        "agility": 0,
+        "speed": "medium",
+        "range": 400,
+        "crew": 1,
+        "passengers": 0,
+        "cargo": 0,
+        "shipping": 3
+      }
+    },
+    "spacecraft": {
+        "templates": [ "crewed" ],
+        "hits": {
+            "value": 80,
+            "max": 80,
+            "damage": 0,
+            "criticals": {}
+        },
+        "initiative": {
+          "base": 0,
+          "value": 0
+        },
+        "spacecraft": {
+            "dtons": 100,
+            "configuration": "standard",
+            "skill": "pilot.acs",
+            "tl": 12,
+            "armour": 0,
+            "radShielding": 0,
+            "computer": {
+                "processing": 0,
+                "tl": 7,
+                "core": false,
+                "bis": false,
+                "fib": false
+            },
+            "power": {
+                "value": 0,
+                "max": 10,
+                "used": 0
+            },
+            "fuel": {
+                "value": 0,
+                "max": 0
+            },
+            "cargo": 20,
+            "mdrive": 0,
+            "rdrive": 0,
+            "jdrive": 0,
+            "navy":  {
+                "naval": false,
+                "supplies": {
+                    "value": 0,
+                    "max": 0
+                },
+                "cei": {
+                    "value": 7,
+                    "current": 7
+                },
+                "morale": 7,
+                "divisions": { }
+            }
+        }
+    }
+  },
+  "Item": {
+    "types": ["item", "weapon", "armour", "augment", "term", "associate", "cargo", "hardware", "role", "software" ],
+    "templates": {
+      "base": {
+        "tl": 0,
+        "weight": 0,
+        "cost": 0,
+        "notes": "",
+        "active": false,
+        "quantity": 1,
+        "status": null
+      },
+      "weapon": {
+        "weapon": {
+            "scale": "traveller",
+            "range": 0,
+            "damage": "1D6",
+            "magazine": 0,
+            "ammo": 0,
+            "magazineCost": 0,
+            "characteristic": "DEX",
+            "skill": "fighter.unarmed",
+            "parryBonus": 0,
+            "damageBonus": "",
+            "damageType": "standard",
+            "attackBonus": 0,
+            "traits": ""
+        }
+      },
+      "armour": {
+        "armour": {
+            "protection": 0,
+            "otherProtection": 0,
+            "otherTypes": "",
+            "rad": 0,
+            "archaic": 0,
+            "skill": "",
+            "duration": 0,
+            "slots": 0,
+            "form": "standard",
+            "layered": 0,
+            "ablat": 0,
+            "powered": 0,
+            "worn": 0
+        }
+      },
+      "augment": {
+      },
+      "software": {
+        "software": {
+          "bandwidth": 0
+        }
+      },
+      "term": {
+          "term": {
+              "number": 0,
+              "termLength": 4,
+              "assignment": "",
+              "randomTerm": false,
+              "randomLength": ""
+          }
+      },
+      "associate": {
+          "associate": {
+              "relationship": "contact",
+              "affinity": 0,
+              "enmity": 0,
+              "power": 0,
+              "influence": 0
+          }
+      },
+      "cargo": {
+          "cargo": {
+              "cost": 100,
+              "availability": "All",
+              "purchaseDM": "",
+              "saleDM": "",
+              "tons": "2D6 * 10",
+              "illegal": false
+          }
+      },
+      "hardware": {
+          "hardware": {
+              "system": "general",
+              "tons": 0,
+              "power": 0,
+              "rating": 0,
+              "variables": {
+                  "max": 0,
+                  "tl": "",
+                  "cost": 0
+              },
+              "tonnage": {
+                  "tons": 0,
+                  "percent": 0,
+                  "cost": 0,
+                  "minimum": 0
+              },
+              "powerPerTon": 0,
+              "mount": "turret",
+              "advantages": "",
+              "weapons": {}
+          }
+      },
+      "role": {
+          "role": {
+              "actions": {},
+              "description": "",
+              "department":  false,
+              "colour": null,
+              "dei": 0
+          }
+      }
+    },
+    "item": {
+      "templates": ["base" ],
+      "description": "Item Description"
+    },
+    "weapon": {
+      "templates": ["base", "weapon"]
+    },
+    "armour": {
+      "templates": ["base", "armour"]
+    },
+    "augment": {
+      "templates": [ "base", "augment" ]
+    },
+    "term": {
+      "templates": [ "term" ]
+    },
+    "associate": {
+      "templates": [ "associate" ]
+    },
+    "cargo": {
+      "templates": [ "cargo"],
+      "quantity": 1
+    },
+    "hardware": {
+      "templates": [ "base","hardware" ]
+    },
+    "role": {
+        "templates": [ "role" ]
+    }
+  }
+}

@@ -1,0 +1,212 @@
+<form class="{{cssClass}} {{item.type}} flexcol" autocomplete="off">
+    <section class="item-sheet">
+        <div class="sidebar">
+            <img class="item-img shadow" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+
+            <div class="shadow item-side-panel">
+                <div class="resource flex-group-center">
+                    <label for="system.quantity" class="resource-label">Quantity</label>
+                    <div class="incdec">
+                        <span class="quantity-dec"><i class="fa-regular fa-square-minus"></i></span>
+                        <input class="writable" type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number"/>
+                        <span class="quantity-inc"><i class="fa-regular fa-square-plus"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadow item-side-panel">
+                <div class="resource">
+                    <label for="system.armour.form" class="resource-label">{{localize "TRAV5.Armour.FormType"}}</label>
+                    <br/>
+                    <select name="system.armour.form">
+                        {{#select system.armour.form}}
+                            <option value="standard">{{localize "TRAV5.Armour.Form.Standard"}}</option>
+                            <option value="layered">{{localize "TRAV5.Armour.Form.Layered"}}</option>
+                            <option value="stackable">{{localize "TRAV5.Armour.Form.Stackable"}}</option>
+                            <option value="natural">{{localize "TRAV5.Armour.Form.Natural"}}</option>
+                        {{/select}}
+                    </select>
+                </div>
+
+                <div class="resource">
+                    <label for="system.armour.archaic" class="resource-label">{{localize "TRAV5.Armour.Archaic"}}</label>
+                    <br/>
+                    <select name="system.armour.archaic">
+                      {{#select system.armour.archaic}}
+                          <option value="0">No</option>
+                          <option value="1">Yes</option>
+                      {{/select}}
+                    </select>
+                </div>
+
+                <div class="resource">
+                    <label for="system.armour.ablat" class="resource-label">{{localize "TRAV5.Armour.Ablative"}}</label>
+                    <br/>
+                    <select name="system.armour.ablat">
+                        {{#select system.armour.ablat}}
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                        {{/select}}
+                    </select>
+                </div>
+
+                <div class="resource">
+                    <label for="system.armour.powered" class="resource-label">{{localize "TRAV5.Armour.Powered"}}</label>
+                    <br/>
+                    <select name="system.armour.powered">
+                        {{#select system.armour.powered}}
+                        <option value="0">No</option>
+                        <option value="1">Yes</option>
+                        {{/select}}
+                    </select>
+                </div>
+
+                <div class="resource">
+                    <label class="resource-label">{{localize "TRAV5.Armour.Duration"}}</label>
+                    <br/>
+                    <input type="text" name="system.armour.duration" value="{{system.armour.duration}}" data-dtype="Number"/>
+                </div>
+
+                <div class="resource">
+                    <label class="resource-label">{{localize "TRAV5.Armour.Slots"}}</label>
+                    <br/>
+                    <input class="armour-value" type="text" name="system.armour.slots" title="Slots"
+                           value="{{system.armour.slots}}" data-dtype="Number"/><br/>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-group-left">
+            <h1 class="charname shadow">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+            </h1>
+            <div class="shadow">
+                <div class="resources grid grid-3col flex-group-left">
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Item.TL"}}</label>
+                        <br/>
+                        <select class="expand writable" name="system.tl" title="Typical TL item is available">
+                            {{#select system.tl}}
+                            <option value="0">0 ({{localize "TRAV5.Item.Tech.0"}})</option>
+                            <option value="1">1 ({{localize "TRAV5.Item.Tech.1"}})</option>
+                            <option value="2">2 ({{localize "TRAV5.Item.Tech.2"}})</option>
+                            <option value="3">3 ({{localize "TRAV5.Item.Tech.3"}})</option>
+                            <option value="4">4 ({{localize "TRAV5.Item.Tech.4"}})</option>
+                            <option value="5">5 ({{localize "TRAV5.Item.Tech.5"}})</option>
+                            <option value="6">6 ({{localize "TRAV5.Item.Tech.6"}})</option>
+                            <option value="7">7 ({{localize "TRAV5.Item.Tech.7"}})</option>
+                            <option value="8">8 ({{localize "TRAV5.Item.Tech.8"}})</option>
+                            <option value="9">9 ({{localize "TRAV5.Item.Tech.9"}})</option>
+                            <option value="10">10 ({{localize "TRAV5.Item.Tech.10"}})</option>
+                            <option value="11">11 ({{localize "TRAV5.Item.Tech.11"}})</option>
+                            <option value="12">12 ({{localize "TRAV5.Item.Tech.12"}})</option>
+                            <option value="13">13 ({{localize "TRAV5.Item.Tech.13"}})</option>
+                            <option value="14">14 ({{localize "TRAV5.Item.Tech.14"}})</option>
+                            <option value="15">15 ({{localize "TRAV5.Item.Tech.15"}})</option>
+                            <option value="16">16 ({{localize "TRAV5.Item.Tech.16"}})</option>
+                            <option value="17">17 ({{localize "TRAV5.Item.Tech.17"}})</option>
+                            <option value="17">17 ({{localize "TRAV5.Item.Tech.18"}})</option>
+                            <option value="17">17 ({{localize "TRAV5.Item.Tech.19"}})</option>
+                            <option value="17">17 ({{localize "TRAV5.Item.Tech.20"}})</option>
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Item.Weight"}}</label>
+                        <input class="writable" type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number"/>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Item.Cost"}}</label>
+                        <input class="writable" type="text" name="system.cost" value="{{system.cost}}" data-dtype="Number"/>
+                    </div>
+
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Armour.Protection"}}</label><br/>
+                        <input class="armour-value writable" type="text" name="system.armour.protection" title="Standard armour"
+                           value="{{system.armour.protection}}" data-dtype="String"/><br/>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Armour.Rads"}}</label><br/>
+                        <input class="writable armour-value" type="text" name="system.armour.rad" title="Radiation protection"
+                             value="{{system.armour.rad}}" data-dtype="Number"/>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Armour.Energy"}}</label>
+                        <br/>
+                        <input class="writable armour-value" type="text" name="system.armour.otherProtection" title="Energy protection"
+                               value="{{system.armour.otherProtection}}" data-dtype="String"/><br/>
+                    </div>
+
+                    <div class="resource grid-span-2">
+                        <label class="resource-label">{{localize "TRAV5.Armour.EnergyTypes"}}</label>
+                        {{#if (isOwner .)}}
+                            <span style="display: inline-block; float: right">
+                                <i class="fa fa-add"></i><select class="energy-selector">
+                                {{selectOptions energyTypes }}
+                            </select>
+                            </span>
+                        {{/if}}
+                        <div class="pill-container">
+                            {{#each haveEnergy as |en id|}}
+                                <div class="pill energy-pill" data-energy-id="{{id}}">{{en}}&nbsp;<i class="fas fa-xmark energy-remove"> </i></div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="resource">
+                        <label class="resource-label">{{localize "TRAV5.Armour.RequiresSkill"}}</label>
+                        <br/>
+                        <select class="expand writable" name="system.armour.skill">
+                            {{#select system.armour.skill}}
+                                <option value="">-</option>
+                                <option value="0">Vacc Suit 0</option>
+                                <option value="1">Vacc Suit 1</option>
+                                <option value="2">Vacc Suit 2</option>
+                                <option value="3">Vacc Suit 3</option>
+                            {{/select}}
+                        </select>
+                    </div>
+                </div>
+          </div>
+          <div class="shadow">
+              {{editor
+                  enrichedDescription target="system.description"
+                  button=true editable=editable}}
+          </div>
+            <div class="shadow">
+                <h2>{{localize "TRAV5.Effects.AugmentEffects"}}</h2>
+
+                <div class="grid grid-3col">
+                    {{#each effectTypes as |eType e|}}
+                        <a class="effect-control augment-types flexrow" data-effectType="{{e}}">
+                            <span class="augment-name">{{localize (concat 'TRAV5.Effects.Type.' e)}}</span>
+                            <i class="fas fa-plus"></i>
+                        </a>
+                    {{/each}}
+                </div>
+                <hr/>
+
+                <ol class="items-list effects-list grid grid-2col">
+                    {{#each effects as |e id|}}
+                    <li class="items effect flexrow" data-effect-id="{{e.id}}">
+                        <label>{{e.name}}</label>
+                        <div class="effect-target">{{effect e.changes.0.key}} {{e.changes.0.value}}</div>
+                        <div class="item-controls effect-controls flexrow">
+                            <a class="effect-control" data-action="edit" title="Edit">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="effect-control" data-action="delete" title="Delete">
+                                <i class="fas fa-trash"></i>
+                            </a>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ol>
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+</form>

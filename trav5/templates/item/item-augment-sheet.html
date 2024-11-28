@@ -1,0 +1,78 @@
+
+<form class="{{cssClass}} item flexcol" autocomplete="off">
+    <section class="item-sheet">
+        <div class="sidebar">
+            <img class="item-img shadow" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+            <div class="shadow item-side-panel">
+                <div class="resource flex-group-center">
+                    <label for="system.quantity" class="resource-label">Quantity</label>
+                    <div class="incdec">
+                        <span class="quantity-dec"><i class="fa-regular fa-square-minus"></i></span>
+                        <input type="text" name="system.quantity" value="{{system.quantity}}" data-dtype="Number"/>
+                        <span class="quantity-inc"><i class="fa-regular fa-square-plus"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="flex-group-left">
+            <h1 class="charname shadow">
+              <input name="name" type="text" value="{{item.name}}" placeholder="Name"/>
+            </h1>
+
+            <div class="shadow">
+                <div class="resources grid grid-3col flex-group-left">
+                    <div class="resource">
+                        <label for="system.tl" class="resource-label">{{localize "TRAV5.Item.TL"}}</label>
+                        <input type="text" name="system.tl" value="{{system.tl}}" data-dtype="Number"/>
+                    </div>
+                    <div class="resource">
+                        <label for="system.weight" class="resource-label">{{localize "TRAV5.Item.Weight"}}</label>
+                        <input type="text" name="system.weight" value="{{system.weight}}" data-dtype="Number"/>
+                    </div>
+                    <div class="resource">
+                        <label for="system.cost" class="resource-label">{{localize "TRAV5.Item.Cost"}}</label>
+                        <input type="text" name="system.cost" value="{{system.cost}}" data-dtype="Number"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shadow">
+                <h2>{{localize "TRAV5.Effects.AugmentEffects"}}</h2>
+
+                <div class="grid grid-3col">
+                    {{#each effectTypes as |eType e|}}
+                    <a class="effect-control augment-types flexrow" data-effectType="{{e}}">
+                        <span class="augment-name">{{localize (concat 'TRAV5.Effects.Type.' e)}}</span>
+                        <i class="fas fa-plus"></i>
+                    </a>
+                    {{/each}}
+                </div>
+                <hr/>
+
+                <ol class="items-list effects-list grid grid-2col">
+                    {{#each effects as |e id|}}
+                        <li class="items effect flexrow" data-effect-id="{{e.id}}">
+                            <label>{{e.label}}</label>
+                            <div class="effect-target">{{effect e.changes.0.key}} {{e.changes.0.value}}</div>
+                            <div class="item-controls effect-controls flexrow">
+                                <a class="effect-control" data-action="edit" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </a>
+                                <a class="effect-control" data-action="delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </a>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ol>
+            </div>
+            <div class="shadow">
+                {{editor
+                    enrichedDescription target="system.description"
+                    button=true editable=editable}}
+            </div>
+        </div>
+    </section>
+</form>

@@ -1,7 +1,7 @@
 {
-  "name": "mgt2e",
-  "title": "FFE Traveller 2e",
-  "description": "A system for FFE Traveller 2e",
+  "name": "trav5",
+  "title": "FFE Traveller 5e",
+  "description": "A system for FFE Traveller 5e",
   "version": "0.11.0",
   "compatibility": {
     "minimum": 11,
@@ -9,38 +9,37 @@
   },
   "authors": [
     {
-      "name": "Samuel Penn",
-      "url": "https://www.notasnark.net/",
-      "email": "sam@notasnark.net",
-      "discord": "notasnark"
+      "name": "n5dkj",
+      "url": "https://n5dkj.radio/",
+      "email": "david@n5dkj.radio"
     }
   ],
-  "esmodules": ["module/mgt2.mjs" ],
-  "styles": ["css/mgt2.css", "css/history.css", "css/items.css", "css/journals.css" ],
-  "background": "systems/mgt2e/images/traveller.png",
+  "esmodules": ["module/trav5.mjs" ],
+  "styles": ["css/trav5.css", "css/history.css", "css/items.css", "css/journals.css" ],
+  "background": "systems/trav5/images/traveller.png",
   "scripts": [ ],
   "packs": [
     {
       "name": "base-items",
-      "label": "MgT2e Base Items",
-      "system": "mgt2e",
-      "module": "mgt2e",
+      "label": "Trav5 Base Items",
+      "system": "trav5",
+      "module": "trav5",
       "path": "packs/base-items",
       "type": "Item"
     },
     {
       "name": "base-actors",
-      "label": "MgT2e Base Actors",
-      "system": "mgt2e",
-      "module": "mgt2e",
+      "label": "Trav5 Base Actors",
+      "system": "trav5",
+      "module": "trav5",
       "path": "packs/base-actors",
       "type": "Actor"
     },
     {
       "name": "traveller-docs",
-      "label": "MgT2e Base Docs",
-      "system": "mgt2e",
-      "module": "mgt2e",
+      "label": "Trav5 Base Docs",
+      "system": "trav5",
+      "module": "trav5",
       "path": "packs/traveller-docs",
       "type": "JournalEntry"
     }
@@ -55,6 +54,10 @@
   "socket": true,
   "gridDistance": 1.5,
   "gridUnits": "m",
+  "grid": {
+    "distance": 1.5,
+    "units": "m"
+  },
   "primaryTokenAttribute": "hits",
   "secondaryTokenAttribute": null,
   "url": "",

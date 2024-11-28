@@ -1,0 +1,61 @@
+<section class="id-card">
+    <div class="id-side">
+        <img src="{{actor.img}}" data-edit="img"
+             title="{{actor.name}}" height="150" width="150"/>
+
+        <div class="info">
+            {{#if actor.system.sophont.species}}
+            <div class="id-data">
+                <h4>{{localize 'TRAV5.TravellerSheet.Species'}}</h4>
+                <span>{{actor.system.sophont.species}}</span>
+            </div>
+            {{/if}}
+            {{#if actor.system.sophont.gender}}
+            <div class="id-data">
+                <h4>{{localize 'TRAV5.TravellerSheet.Gender'}}</h4>
+                <span>{{actor.system.sophont.gender}}</span>
+            </div>
+            {{/if}}
+            {{#if actor.system.sophont.homeworld}}
+            <div class="id-data">
+                <h4>{{localize 'TRAV5.TravellerSheet.HomeWorld'}}</h4>
+                <span>{{actor.system.sophont.homeworld}}</span>
+            </div>
+            {{/if}}
+        </div>
+
+    </div>
+
+    <div class="id-card">
+        <h1 class="charname shadow">
+            {{actor.name}}
+            {{#if users}}<i class="id-share fa-regular fa-share-from-square"></i>{{/if}}
+        </h1>
+
+        {{log system}}
+        <div class="upp">
+            <span class="upp">{{toHex actor.system.characteristics.STR.value}}</span>
+            <span class="upp">{{toHex actor.system.characteristics.DEX.value}}</span>
+            <span class="upp">{{toHex actor.system.characteristics.END.value}}</span>
+            <span class="upp">{{toHex actor.system.characteristics.INT.value}}</span>
+            <span class="upp">{{toHex actor.system.characteristics.EDU.value}}</span>
+            <span class="upp">{{toHex actor.system.characteristics.SOC.value}}</span>
+
+            {{#if actor.system.sophont.profession}}
+            <div class="id-data">
+                <h4>{{localize 'TRAV5.TravellerSheet.Profession'}}</h4>
+                <span>{{actor.system.sophont.profession}}</span>
+            </div>
+            {{/if}}
+        </div>
+        <div class="card-skills">
+            <h4>Qualifiations</h4>
+            <span>{{{showSimpleSkills actor}}}</span>
+        </div>
+
+        <div class="description">
+            {{{actor.system.description}}}
+        </div>
+    </div>
+</section>
+

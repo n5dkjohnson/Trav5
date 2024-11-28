@@ -1,0 +1,44 @@
+<form class="{{cssClass}} item career" autocomplete="off">
+
+    <img class="career" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+
+    <h1 class="career"><input name="name" type="text" value="{{item.name}}" placeholder="Career Type"/></h1>
+
+    <div class="grid grid-8col">
+        <div class="grid-span-1">
+            <label class="resource-label">{{localize "TRAV5.Item.Term.Number"}}</label><br/>
+            <input name="system.term.number" type="number" value="{{item.system.term.number}}" placeholder="Num"/>
+        </div>
+
+        {{#if system.term.randomTerm}}
+            <div class="grid-span-1">
+                <label class="resource-label">{{localize "TRAV5.Item.Term.RandomLength"}}</label><br/>
+                <input name="system.term.randomLength" type="text" value="{{item.system.term.randomLength}}" placeholder="3D6"/>
+            </div>
+        {{else}}
+            <div class="grid-span-1">
+                <label class="resource-label">{{localize "TRAV5.Item.Term.Length"}}</label><br/>
+                <input name="system.term.termLength" type="number" value="{{item.system.term.termLength}}" placeholder="4"/>
+            </div>
+        {{/if}}
+
+        <div class="grid-span-6">
+            <label class="resource-label">{{localize "TRAV5.Item.Term.Assignment"}}</label><br/>
+            <input name="system.term.assignment" type="text" value="{{system.term.assignment}}" placeholder="{{localize "TRAV5.Item.Term.Assignment"}}"/>
+        </div>
+
+        {{#if showRandom}}
+        <div class="grid-span-8">
+            <input class="trained" type="checkbox" name="system.term.randomTerm"
+                   {{checked system.term.randomTerm}} data-type="Boolean"/>
+            <label for="system.term.randomTerm">{{localize "TRAV5.Item.Term.RandomTerm"}}</label>
+        </div>
+        {{/if}}
+
+    </div>
+
+    <section class="shadow history-description">
+        {{editor enrichedDescription target="system.description" button=true editable=editable}}
+    </section>
+
+</form>

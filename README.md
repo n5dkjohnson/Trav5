@@ -1,16 +1,16 @@
-# Mongoose Traveller for FoundryVTT
+# FFE Traveller for FoundryVTT
 
 **Version:**  0.11.0
 
-This is an implementation of Mongoose Traveller 2e for FoundryVTT. It currently supports Foundry v11.
+This is an implementation of FFE Traveller 2e for FoundryVTT. It currently supports Foundry v11.
 it is currently in beta, so suggestions and bug reports are greatly appreciated. The basic game rules
 are currently supported, but new features are being added all the time.
 
-![Mongoose Traveller on Foundry](docs/traveller-foundry.png)
+![FFE Traveller on Foundry](docs/traveller-foundry.png)
 
 Currently, it provides support for:
 * Character sheets for Travellers (PCs), NPCs and Creatures are provided.
-* A full built-in list of skills for characters, along with Mongoose 2e rules for specialities and professions.
+* A full built-in list of skills for characters, along with FFE 2e rules for specialities and professions.
 * Skills can be dragged to the hot bar for quick access.
 * Attack rolls, with damage and effect, stun damage, AP and other weapon attributes.
 * Augments, including Expert Systems, augmented armour and cyberwear.

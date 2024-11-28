@@ -1,0 +1,61 @@
+{
+  "name": "Engineer",
+  "type": "role",
+  "img": "systems/trav5/icons/items/crew_role.svg",
+  "system": {
+    "role": {
+      "actions": {
+        "lybohc5d": {
+          "title": "Jump",
+          "action": "skill",
+          "chat": "",
+          "skill": "engineer.jDrive",
+          "dm": null,
+          "cha": "EDU",
+          "target": 4
+        },
+        "lyboht8t": {
+          "title": "Overload Power",
+          "action": "skill",
+          "chat": "",
+          "skill": "engineer.power",
+          "dm": null,
+          "cha": "INT",
+          "target": 10
+        },
+        "lyboi8o8": {
+          "title": "Overload Drive",
+          "action": "skill",
+          "chat": "",
+          "skill": "engineer.mDrive",
+          "dm": null,
+          "cha": "INT",
+          "target": 10
+        }
+      },
+      "description": ""
+    }
+  },
+  "effects": [],
+  "folder": "eElDlFei05r9Idke",
+  "ownership": {
+    "default": 0,
+    "Uzw5MJmM0BRE3sSL": 3
+  },
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "trav5",
+    "systemVersion": "0.10.1",
+    "coreVersion": "12.329",
+    "createdTime": 1720364288589,
+    "modifiedTime": 1725187252997,
+    "lastModifiedBy": "mhUjqDVicnwIUaiq",
+    "compendiumSource": null,
+    "duplicateSource": null
+  },
+  "_id": "HFzaHWDXr6Nq4MJU",
+  "sort": 0,
+  "_key": "!items!HFzaHWDXr6Nq4MJU"
+}
